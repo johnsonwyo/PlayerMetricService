@@ -1,0 +1,15 @@
+spring:
+    application:
+     name: player-metric-service 
+    profiles:
+      active: prod
+    cloud:
+        config: 
+            uri: http://configserver:8071
+
+#Enable all Spring Boot Actuator endpoints.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
